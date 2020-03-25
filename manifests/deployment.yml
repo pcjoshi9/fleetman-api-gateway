@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: ashishrajfleetmanapigateway 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ashishrajfleetmanapigateway 
+    spec:
+      containers:
+        - name: ashishrajfleetmanapigateway 
+          image: rldevopsregistry.azurecr.io/ashishrajfleetmanapigateway
+          ports:
+          - containerPort: 8080
